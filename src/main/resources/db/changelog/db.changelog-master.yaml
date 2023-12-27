@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: changeset/create_user_table.sql
+      relativeToChangeLogFile: true

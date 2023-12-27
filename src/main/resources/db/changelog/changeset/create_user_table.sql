@@ -1,4 +1,7 @@
-DROP TABLE IF EXISTS user;
+-- liquibase formatted sql
+
+-- changeset liquibase:1
+
 
 CREATE EXTENSION citext;
 CREATE DOMAIN email AS citext
@@ -13,3 +16,5 @@ CREATE TABLE user
 );
 
 COMMENT ON TABLE user IS 'User table';
+
+-- rollback drop table user; drop extension citext cascade;
